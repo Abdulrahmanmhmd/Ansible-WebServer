@@ -55,7 +55,6 @@
 
 
   handlers:
-# Define your handler here
   - name: restart webserver
     service:
      name:"{{ webserver_service }}"
