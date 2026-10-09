@@ -1,0 +1,22 @@
+webserver_package: "nginx"
+webserver_service: "nginx"
+webserver_port: 80
+app_env: "production"
+
+config_files:
+- nginx.conf
+- security.conf
+- logging.conf
+
+virtual_hosts:
+  - server_name: "site1.example.com"
+    document_root: "/var/www/site1/html"
+    port: 80
+    
+  - server_name: "site2.example.com"
+    document_root: "/var/www/site2/html"
+    port: 80
+    
+  - server_name: "blog.example.com"
+    document_root: "/var/www/blog/html"
+    port: 80
